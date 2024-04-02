@@ -29,7 +29,7 @@ public class AuthController {
 
 	@PostMapping("/authenticate")
 	public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request) {
-		// authenticate
+		
 		this.doAuthenticate(request.getUsername(), request.getPassword());
 
 		UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());

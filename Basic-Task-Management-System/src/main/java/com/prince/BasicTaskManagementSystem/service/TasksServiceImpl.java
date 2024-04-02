@@ -87,7 +87,6 @@ public class TasksServiceImpl implements TasksService {
 
 	private Task findByTaskId(Integer taskId) {
 		Task task = taskRepository.findById(taskId).orElseThrow(() -> new ResourceNotFoundException("Task not found"));
-//		Task task = tasks.get();
 		return task;
 	}
 
